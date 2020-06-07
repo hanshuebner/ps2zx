@@ -1,0 +1,12 @@
+Comment,Designator,Footprint,LCSC
+"100nF","C1","Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder",""
+"22pF","C2,C3","Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder",""
+"Keyboard","J1","kicad_4x1md:Connector_Mini-DIN_Female_6Pin_2rows",""
+"KB1","J2","Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical",""
+"KB2","J3","Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical",""
+"Board","J4","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",""
+"ISP","J5","Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical",""
+"BTN1","SW1","Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm",""
+"BTN2","SW2","Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm",""
+"ATmega8-16AU","U1","Package_QFP:TQFP-32_7x7mm_P0.8mm",""
+"16Mhz","Y1","Crystal:Crystal_HC49-U_Vertical",""

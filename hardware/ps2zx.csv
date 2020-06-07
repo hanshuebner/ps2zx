@@ -1,0 +1,12 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"Y1";"Crystal_HC49-U_Vertical";1;"16Mhz";;;
+2;"C2,C3";"C_0805_2012Metric_Pad1.15x1.40mm_HandSolder";2;"22pF";;;
+3;"J4";"PinHeader_1x04_P2.54mm_Vertical";1;"Board";;;
+4;"U1";"TQFP-32_7x7mm_P0.8mm";1;"ATmega8-16AU";;;
+5;"J5";"PinHeader_2x05_P2.54mm_Vertical";1;"ISP";;;
+6;"SW1";"SW_Push_1P1T_NO_6x6mm_H9.5mm";1;"BTN1";;;
+7;"SW2";"SW_Push_1P1T_NO_6x6mm_H9.5mm";1;"BTN2";;;
+8;"C1";"C_0805_2012Metric_Pad1.15x1.40mm_HandSolder";1;"100nF";;;
+9;"J1";"Connector_Mini-DIN_Female_6Pin_2rows";1;"Keyboard";;;
+10;"J3";"PinHeader_1x08_P2.54mm_Vertical";1;"KB2";;;
+11;"J2";"PinHeader_1x05_P2.54mm_Vertical";1;"KB1";;;
