@@ -1,20 +1,37 @@
 #include "ps2kbd.h"
-#include "lcd.h"
 
+#include <avr/io.h>
+#include <avr/interrupt.h>
 
-int main()
+int
+main()
 {
-	unsigned char	c;
+  unsigned char	c;
 
-	kbd_init();
-	
-	lcd_init(LCD_DISP_ON);
+  kbd_init();
 
-	while(1)
-	{
-		while(c = kbd_getchar())
-			lcd_putc(c);
-	}
+  DDRB |= 0x1F;
+  DDRC |= 0x3F;
+  DDRD |= 0x03;
+
+  sei();
+
+  while(1) {
+    while (c = kbd_getchar()) {
+      PORTC = c;
+      if (c & 0x40) {
+        PORTD |= _BV(PD0);
+      } else {
+        PORTD &= ~_BV(PD0);
+      }
+      if (c & 0x80) {
+        PORTD |= _BV(PD1);
+      } else {
+        PORTD &= ~_BV(PD1);
+      }
+      PORTB = kbd_get_status();
+    }
+  }
 	
-	return 0;
+  return 0;
 }

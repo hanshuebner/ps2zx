@@ -16,18 +16,18 @@
 #include <stdint.h>
 
 
-#define	KBD_INT		INT1_vect		/* Interrupt to be activated on negative edge of clock signal */
-#define	KBD_SET_INT()	MCUCR |= _BV(ISC11)	/* Code to trigger the appropriate interrupt on the negative edge */
-#define KBD_EN_INT()	GICR |= _BV(INT1)	/* Code to enable the appropriate interrupt */
+#define	KBD_INT		INT0_vect		/* Interrupt to be activated on negative edge of clock signal */
+#define	KBD_SET_INT()	MCUCR |= _BV(ISC10)	/* Code to trigger the appropriate interrupt on the negative edge */
+#define KBD_EN_INT()	GICR |= _BV(INT0)	/* Code to enable the appropriate interrupt */
 
 #define	KBD_DATA_PORT	PORTD
 #define	KBD_DATA_DDR	DDRD
 #define	KBD_DATA_PIN	PIND
-#define	KBD_DATA_BIT	PD4
+#define	KBD_DATA_BIT	PD5
 
 #define	KBD_CLOCK_PORT	PORTD
 #define	KBD_CLOCK_DDR	DDRD
-#define	KBD_CLOCK_BIT	PD3
+#define	KBD_CLOCK_BIT	PD2
 
 #define	KBD_BUFSIZE	8
 
