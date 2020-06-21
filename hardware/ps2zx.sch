@@ -25,7 +25,7 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2486-8-bit-avr-microc
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Mini-DIN-6 J1
+L ps2zx-rescue:Mini-DIN-6-Connector-ps2zx-rescue J1
 U 1 1 5EDFC7B4
 P 4850 2150
 F 0 "J1" H 4850 2517 50  0000 C CNN
@@ -559,12 +559,12 @@ $EndComp
 $Comp
 L power:+5V #PWR011
 U 1 1 5EF46876
-P 2250 4850
-F 0 "#PWR011" H 2250 4700 50  0001 C CNN
-F 1 "+5V" H 2265 5023 50  0000 C CNN
-F 2 "" H 2250 4850 50  0001 C CNN
-F 3 "" H 2250 4850 50  0001 C CNN
-	1    2250 4850
+P 2250 4550
+F 0 "#PWR011" H 2250 4400 50  0001 C CNN
+F 1 "+5V" H 2265 4723 50  0000 C CNN
+F 2 "" H 2250 4550 50  0001 C CNN
+F 3 "" H 2250 4550 50  0001 C CNN
+	1    2250 4550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -591,4 +591,15 @@ Wire Wire Line
 Wire Wire Line
 	5250 1900 5150 1900
 Connection ~ 5250 2150
+$Comp
+L Device:R R2
+U 1 1 5EEFA480
+P 2250 4700
+F 0 "R2" H 2320 4746 50  0000 L CNN
+F 1 "330Ω" H 2320 4655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2180 4700 50  0001 C CNN
+F 3 "~" H 2250 4700 50  0001 C CNN
+	1    2250 4700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
