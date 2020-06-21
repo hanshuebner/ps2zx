@@ -14,9 +14,17 @@ main()
   DDRC |= 0x3F;
   DDRD |= 0x03;
 
+  // Enable pull-ups for buttons
+  PORTD |= _BV(PD6);
+  PORTD |= _BV(PD7);
+
+  // Set ~RESET pin as output
+  DDRD |= _BV(PD4);
+
   sei();
 
   while(1) {
+    PORTD |= _BV(PD4);
     while (c = kbd_getchar()) {
       PORTC = c;
       if (c & 0x40) {
@@ -31,6 +39,7 @@ main()
       }
       PORTB = kbd_get_status();
     }
+    PORTD &= ~_BV(PD4);
   }
 	
   return 0;

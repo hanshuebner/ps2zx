@@ -6,6 +6,9 @@ LIBOBJ=ps2kbd.o
 
 all: ps2kbd_test.hex ps2kbd_test.lst
 
+program: ps2kbd_test.hex
+	avrdude -P /dev/tty.usbserial-14320 -c avrispmkII -p m8 -U flash:w:ps2kbd_test.hex -U lfuse:w:0xff:m -U hfuse:w:0xd9:m
+
 ps2kbd_test.hex: $(LIBOBJ)
 
 clean:
